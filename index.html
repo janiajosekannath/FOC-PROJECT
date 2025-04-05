@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Fitness Tracker</h1>
+  </header>
+
+  <div class="input-container">
+    <input type="text" id="workout-name" placeholder="Workout Name" required>
+    <input type="number" id="calories-burned" placeholder="Calories Burned" required>
+    <input type="date" id="workout-date" required>
+    <button onclick="addWorkout()">Add Workout</button>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h3>Total Workouts</h3>
+      <p id="total-workouts">0</p>
+    </div>
+    <div class="card">
+      <h3>Total Calories</h3>
+      <p id="total-calories">0</p>
+    </div>
+  </div>
+
+  <div style="margin: 40px auto; max-width: 700px;">
+    <h2>Calories Burned Over Time</h2>
+    <canvas id="progressChart"></canvas>
+  </div>
+
+  <div style="max-width: 600px; margin: 30px auto;">
+    <h2>Workout Log</h2>
+    <ul id="workout-log"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
